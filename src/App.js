@@ -1,6 +1,14 @@
-import React from 'react'
+import React ,{Component} from 'react'
 import { hot } from 'react-hot-loader'
 
-const App = () => <div>Hellosdfsdf World!</div>
+class App extends Component {
+    render () {
+
+        return (
+            null
+        )
+    }
+
+}
 
 export default hot(module)(App)

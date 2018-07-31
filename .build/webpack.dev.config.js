@@ -49,7 +49,6 @@ let webpackDevConfig = {
                     {
                         loader:'css-loader',
                         options: {
-                            modules:true,
                             sourceMap:true,
                             importLoaders: 1,
                         }
