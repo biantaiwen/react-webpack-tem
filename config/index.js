@@ -1,46 +1,26 @@
 const path = require('path')
 const fs = require('fs');
-const url = require('url');
 
 // const appDirectory = fs.realpathSync(process.cwd());
 const appDirectory = fs.realpathSync(path.join(__dirname, '..'));
 const resolveApp = (relativePath='') => path.resolve(appDirectory, relativePath);
-
-// function resolve (dir) {
-//     return path.join(__dirname, '..', dir)
-// }
-// module.exports = {
-//     context:resolveApp(),
-//     dotenv: resolveApp('.env'),
-//     appBuild: resolveApp('build'),
-//     appPublic: resolveApp('public'),
-//     appHtml: resolveApp('public/index.html'),
-//     appIndexJs: resolveApp('src/index.js'),
-//     appPackageJson: resolveApp('package.json'),
-//     appSrc: resolveApp('src'),
-//     appNodeModules: resolveApp('node_modules'),
-//     publicUrl: '/',
-//     servedPath: '/',
-// };
-
-
 
 module.exports = {
     dev: {
         NODE_ENV: '"development"',
         // Paths
         assetsPublicPath: '/',
-        //Dev Server 配置
+        // Dev Server 配置
         devServer:{
-            //当使用 HTML5 History API 时，任意的 404 响应都可能需要被替代为 index.html
+            // 当使用 HTML5 History API 时，任意的 404 响应都可能需要被替代为 index.html
             indexName:'index.html',
-            //代理配置
+            // 代理配置
             proxyTable: {},
             host: '0.0.0.0', // can be overwritten by process.env.HOST   localhost
             port: 8080,
-            open: true,//自动打开浏览器
+            open: true,// 自动打开浏览器
             overlay:{
-                warnings: true,
+                warnings: false,
                 errors: true
             },
             poll: false

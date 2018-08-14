@@ -43,6 +43,13 @@ let webpackDevConfig = {
                 loader: "babel-loader"
             },
             {
+                enforce:"pre",
+                test: /\.(js|jsx)$/,
+                exclude:resolve('node_modules'),
+                include: [config.path.appSrc],
+                loader: "eslint-loader"
+            },
+            {
                 test:/\.(sa|sc|c)ss$/,
                 loader:[
                     'style-loader',

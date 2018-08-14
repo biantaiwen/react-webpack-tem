@@ -1,14 +1,9 @@
-import React ,{Component} from 'react'
-import { hot } from 'react-hot-loader'
+import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 
 class App extends Component {
-    render () {
-
-        return (
-            null
-        )
+    render() {
+        return <div>hello</div>;
     }
-
 }
-
-export default hot(module)(App)
+export default hot(module)(App);
